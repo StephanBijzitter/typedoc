@@ -76,9 +76,16 @@ If you don't already have [Git] installed, install it first. You will need it to
    ```bash
    git clone https://github.com/USER/typedoc
    ```
-1. Add the TypeDoc repo as a remote repository
+1. Add the TypeDoc repo as a remote repository (Github Desktop does this automatically)
    ```bash
-   git remote add typedoc https://github.com/TypeStrong/typedoc
+   git remote add upstream https://github.com/TypeStrong/typedoc
+   ```
+1. To verify your remotes, run `git remote --verbose`; it should say:
+   ```
+   origin      https://github.com/YOUR_FORK/typedoc.git (fetch)
+   origin      https://github.com/YOUR_FORK/typedoc.git (push)
+   upstream    https://github.com/TypeStrong/typedoc.git (fetch)
+   upstream    https://github.com/TypeStrong/typedoc.git (push)
    ```
 1. Install dependencies:
    ```bash
@@ -116,7 +123,7 @@ Please do not change the project version number in a pull request.
 
 ## Updating Your Branch
 
-If the TypeDoc repository has changed since you originally forked it, you will need to update your repository with the latest changes before submitting a pull request. To pull the latest changes from the TypeDoc repo, run `git pull typedoc master`.
+If the TypeDoc repository has changed since you originally forked it, you will need to update your repository with the latest changes before submitting a pull request. To pull the latest changes from the TypeDoc repo, run `git pull upstream master`.
 
 [bugs]: https://github.com/TypeStrong/typedoc/labels/bug
 [suggestions]: https://github.com/TypeStrong/typedoc/labels/enhancement
